@@ -24,14 +24,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      - uses: npm/action-setup@v2 # pnpm is optional but recommended, you can also use npm / yarn
+      - uses: actions/setup-node@v3 #  use npm / yarn          
         with:
-          version: 6
-          cache: npm
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
           cache: npm
       - name: Setup Pages
         uses: actions/configure-pages@v3
