@@ -24,7 +24,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      - uses: actions/setup-node@v3 #  use npm / yarn          
+      - name: Setup Node
+        uses: actions/setup-node@v3 #  use npm / yarn          
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
@@ -34,8 +35,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build with Rspress
-        run: |
-          npm run build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
