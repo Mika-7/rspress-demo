@@ -3,7 +3,7 @@ import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  title: 'Rspress',
+  title: '米咖的知识库',
   description: 'Rspack-based Static Site Generator',
   icon: '/rspress-icon.png',
   base: '/rspress-demo',
@@ -13,7 +13,11 @@ export default defineConfig({
   },
   themeConfig: {
     socialLinks: [
-      { icon: 'github', mode: 'link', content: 'https://github.com/web-infra-dev/rspress' },
+      { 
+        icon: 'github', 
+        mode: 'link', 
+        content: 'https://github.com/Mika-7' 
+      },
     ],
   },
 });
